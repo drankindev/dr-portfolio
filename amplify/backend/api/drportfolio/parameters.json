@@ -1,0 +1,6 @@
+{
+  "AppSyncApiName": "drportfolio",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2023-12-15T16:25:18.187Z"
+}

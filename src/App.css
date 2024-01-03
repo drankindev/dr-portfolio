@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Lato:400,800,900');
+
+body {
+  @apply w-full overflow-x-hidden bg-dark-lines;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a,p,h1,h2,h3,h4,h5{
+  @apply font-lato text-dark-gray;
+}
+a {
+  @apply text-white hover:text-black decoration-0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bg-light-lines {
+  @apply bg-light-gray bg-[url('/assets/light_grey.jpg')] bg-fixed;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bg-mid-lines {
+  @apply bg-mid-gray bg-[url('/assets/mid_grey.jpg')] bg-fixed;
 }
 
-.App-link {
-  color: #61dafb;
+.bg-dark-lines {
+  @apply bg-dark-gray bg-[url('/assets/dark_grey.jpg')] bg-fixed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+img {
+	border:none;
+	outline:none;	
+}
+ul, li {
+	list-style:none;
+}
+form, fieldset, input, select, textarea {
+	border:none;
+	background:none;
+	color:#000;
+	outline:none
+}
+
+p {
+  @apply text-sm md:text-base leading-6 mb-3 font-normal;
+}
+
+h3{
+  @apply text-2xl md:text-3xl mb-4 font-black uppercase;
+}
+  
+#Expertise h4{
+  @apply font-black text-xl uppercase mb-2 bg-blue rounded-t-lg text-white text-center;
+}
+h4{
+  @apply font-black text-xl uppercase mb-1;
+}
+ #Portfolio h4 a{
+  @apply text-dark-gray hover:text-green text-xl uppercase mb-1;
+}
+
+h5{
+  @apply font-bold text-xs mb-0 leading-5;
+}
+
+address {
+  font-style:normal;
+}
+
+object, embed{
+  outline: none;
+}
+
+#page-body{
+  @apply w-full h-full relative z-0 p-4 md:pt-28 md:pb-20 md:px-8;
+}
+
+.section-wrapper{
+  @apply max-w-5xl mx-auto md:pl-8 relative;
+}
+
+footer p{
+  @apply w-full text-xs md:text-sm font-bold text-center md:w-auto md:text-left leading-4 m-0 pb-1;
+}
+
+.App[color='green'] .section-color{
+  @apply bg-green;
+}
+
+.App[color='blue'] .section-color{
+  @apply bg-blue;
+}
+
+.App[color='orange'] .section-color{
+  @apply bg-orange;
+}
+
+.App[color='red'] .section-color{
+  @apply bg-red;
+}
+
+.text-box{
+  @apply rounded-xl bg-mid-lines md:p-4 md:drop-shadow-2xl text-left;
+}
+
+.text-box > div{
+  @apply rounded-lg h-full w-full bg-slate-50 md:drop-shadow-xl overflow-hidden;
+}
+
+.main-navigation li.active {
+  @apply bg-white rounded-b-lg md:rounded-t-lg md:rounded-b-none;
+}
+
+.main-navigation li.active a {
+  @apply text-mid-gray hover:text-dark-gray;
+}
+
+.sub-navigation li.active a {
+  @apply text-dark-gray hover:text-dark-gray;
+}
+
+.arrow {
+  @apply absolute block w-8 h-8 top-1/2 translate-y-[-1rem];
+}
+
+.arrow svg{
+  @apply w-8 h-8 fill-white hover:fill-dark-gray;
+}
+.arrow.previous {
+  @apply -left-2;
+}
+.arrow.next {
+  @apply -right-2;
+}
+
+.slideshow-nav .dot-nav button{
+  @apply inline-block w-2 h-2 mx-1 rounded-full bg-white hover:bg-dark-gray;
+}
+
+.slideshow-nav .dot-nav button.active{
+  @apply bg-dark-gray;
 }

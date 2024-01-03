@@ -1,0 +1,362 @@
+const portfolioData = [
+    {
+        name: 'crains-detroit',
+        title: 'Crain\u2019s Detroit',
+        body: [''],
+        category: 'websites',
+        weight: 0,
+        tags: ['front','back','drupal','tailwind'],
+        media: [
+            {
+                url:'http://fpoimg.com/600x400?text=Preview',
+                title: 'FPO'
+            },
+        ],
+        url:'https://www.crainsdetroit.com/'
+    },
+    {
+        name: 'adage',
+        title: 'AdAge',
+        body: [''],
+        category: 'websites',
+        weight: 0,
+        tags: ['front','back','drupal','tailwind'],
+        media: [
+            {
+                url:'http://fpoimg.com/600x400?text=Preview',
+                title: 'FPO'
+            },
+        ],
+        url:'https://www.adage.com'
+    },
+    {
+        name: 'investmentnews',
+        title: 'Investment News',
+        body: ['I designed and developed this news site from the ground up using data-driven UI design to increase ad impressions, reader engagement, and usability.'],
+        category: 'websites',
+        weight: 0,
+        tags: ['ux','front','back','sax','js','video-player','Custom Award Sites','data'],
+        media: [
+            {
+                url:'http://fpoimg.com/600x400?text=Preview',
+                title: 'FPO'
+            },
+        ],
+    },
+    {
+        name: 'in-gamechangers',
+        title: 'Investment News: Game Changers',
+        body: ['I collaborated with editorial staff to create these award winning featured articles.'],
+        category: 'special-features',
+        weight: 0,
+        tags: ['concept','ux','front','back','sax','jq'],
+        media: [
+            {
+                url:'http://fpoimg.com/600x400?text=Preview',
+                title: 'FPO'
+            },
+        ],
+    },
+    {
+        name: 'in-w2w',
+        title: 'Investment News: Women to Watch',
+        body: [''],
+        category: 'special-features',
+        weight: 0,
+        tags: ['ux','front','back','sax','jq'],
+        media: [
+            {
+                url:'http://fpoimg.com/600x400?text=Preview',
+                title: 'FPO'
+            },
+        ],
+    },
+    {
+        name: 'in-40under40',
+        title: 'Investment News: 40 Under 40',
+        body: [''],
+        category: 'special-features',
+        weight: 0,
+        tags: ['ux','front','back','sax','jq'],
+        media: [
+            {
+                url:'http://fpoimg.com/600x400?text=Preview',
+                title: 'FPO'
+            },
+        ],
+    },
+    {
+        name: 'in-data',
+        title: 'Investment News: Advisor Center',
+        body: ['I designed this data center that displays paid company profiles and analytics with multiple sponsorship levels, rankings and up-to-date and news. I also created an admin application to act as a central location for editorial staff to administer multiple databases and services.'],
+        category: 'applications',
+        weight: 0,
+        tags: ['ux','front','back','sax','jq','mysql','admin'],
+        media: [
+            {
+                url:'http://fpoimg.com/600x400?text=Preview',
+                title: 'FPO'
+            },
+        ],
+        url: 'https://careers.investmentnews.com/adviser-center'
+    },
+    {
+        name: 'pionline',
+        title: 'Pensions & Investments',
+        body: [''],
+        category: 'websites',
+        weight: 0,
+        tags: ['front','back','drupal','sax'],
+        media: [
+            {
+                url:'http://fpoimg.com/600x400?text=Preview',
+                title: 'FPO'
+            },
+        ],
+        url:'https://www.pionline.com/'
+    },
+    {
+        name: 'pi-events',
+        title: 'Pensions & Investments: Conferences Site',
+        body: [''],
+        category: 'applications',
+        weight: 0,
+        tags: ['front','back','react','mongodb','admin'],
+        media: [
+            {
+                url:'http://fpoimg.com/600x400?text=Preview',
+                title: 'FPO'
+            },
+        ],
+        url:'https://www.pionline.com/'
+    },
+    {
+        name: 'pi-research',
+        title: 'Pensions & Investments: Research Center',
+        body: [''],
+        category: 'applications',
+        weight: 0,
+        tags: ['front','back','angular','mongodb','codeignitor','symfony','admin'],
+        media: [
+            {
+                url:'http://fpoimg.com/600x400?text=Preview',
+                title: 'FPO'
+            },
+        ],
+        url:'https://www.pionline.com/research-center'
+    },  
+    {
+        "title":"Greenfield / Belser",
+        'category':'websites',
+        'name':"gbltd",
+        "featured":true,
+        'weight':1,
+        "thumb":"/media/gbltd_thumb.jpg",
+        "url": "http://greenfieldbelser.com",
+        'media': [
+            { url: "/media/GB_web_hi.jpg", title: 'Greenfield / Belser' },
+         ],
+        "mobile":"/media/GB_mobile_sm.jpg",
+        'body':["Greenfield/Belser's website is a fine example of fresh design. Unique features on every page showcase their variety of services."],
+        'tags':['ux','front','back','jq','video-player',"Case Studies Viewer","3D People Viewer" ]
+    },
+    {
+        "title":"World Wildlife Fund",
+        'category':'websites',
+        'name':"wwf",
+        "featured":true,
+        'weight':2,
+        "thumb":"/media/WWF_thumb2.jpg",
+        'media': [
+            { url: "/media/WWF-home.jpg", title: 'World Wildlife Fund' },
+         ],
+        "video":"/clients/WWF/WWF-Home_Map.f4v",
+        'body':["This rich site overflows with unique features and multimedia. The interactive world map shows their reach across the globe. Animated banners on every page entice the user to donate."],
+        'tags':['ux','front','feature','map','banners','timeline']
+    },
+    {
+        "title":"Point & Clique",
+        'category':'applications',
+        'name':"PnC",
+        "featured":true,
+        'weight':3,
+        "thumb":"/media/PnC_thumb.jpg",
+        //"url":"http://pointandclique.com",
+        'media': [
+            { url: "/media/PnC_screen.jpg", title: 'Point & Clique' },
+         ],
+        'body':["You can easily manage your website's content with this robust CMS. Pages are organized with a simple folder structure,and thousands of images and video and be searched in an instant."],
+        'tags':['ux','front','back',"Media Search"]
+    },
+    {
+        "title":"Point Plotter",
+        'category':'applications',
+        'name':"point-plotter",
+        "thumb":"/media/PointPlotter_thumb.jpg",
+        'media': [
+            { url: "/media/PointPlotter.jpg", title: 'Point Plotter' },
+         ],
+        'weight':-1,
+        'body':["This module for Point & Clique allows the user to accurate pick coordinates for maps with a drag and drop interface."],
+        'tags':['concept','ux','front','back']
+    },
+    {
+        "title":"The Reading Connection",
+        'category':'websites',
+        'name':"reading-connection",
+        'weight':-1,
+        "thumb":"/media/TRC_thumb.jpg",
+        'media': [
+            { url: "/media/TRC_Home.jpg", title: 'The Reading Connection' },
+         ],
+        'body':[""],
+        //"url":"http://thereadinconnection.org",
+        'tags':['ux','front','jq','Interactive Book Component']
+    },
+    {
+        "title":"Brown Rudnick",
+        'category':'websites',
+        'name':"brown-rudnick",
+        'weight':-1,
+        "thumb":"/media/BRO_thumb.jpg",
+        'media': [
+            { url: "/media/BRO_Home.jpg", title: 'Brown Rudnick' },
+         ],
+        'body':[""],
+        //"url":"http://brownrudnick.com",
+        'tags':['ux','front','back','Homepage Slideshow','Wordpress Blog']
+
+    },
+
+    {
+        "title":"Choate Hall & Stewart",
+        'category':'websites',
+        'name':"choate",
+        'weight':5,
+        "featured":true,
+        "thumb":"/media/CHS_thumb.jpg",
+        'media': [
+            { url: "/media/CHS_Home.jpg", title: 'Choate Hall & Stewart' },
+        ],
+        "mobile":"/media/CHS_mobile_sm.jpg",
+        'body':[""],
+        //"url":"http://choate.com",
+        'tags':['ux','front','back','feature','video-player','video-production']
+
+    },
+    {
+        "title":"Wine & Spirits Wholesalers of America",
+        'category':'websites',
+        'name':"wswa",
+        'weight':-1,
+        "thumb":"/media/WSWA_thumb.jpg",
+        'media': [
+            { url: "/media/WSWA_Home.jpg", title: 'Wine & Spirits Wholesalers of America' },
+        ],
+        'body':[""],
+        //"url":"http://wswa.org",
+        'tags':['ux','front','feature','map',"Event Countdown","Donation Meter"]
+    },
+    {
+        "title":"Dow Lohnes",
+        'category':'websites',
+        'name':"dowlohnes",
+        'weight':-1,
+        "thumb":"/media/DOW_thumb.jpg",
+        'media': [
+            { url: "/media/DOW_Home.jpg", title: 'Dow Lohnes' },
+        ],
+        'body':[],
+        //"url":"http://dowlohnes.com",
+        'tags':['front','back','jq','feature']
+    },
+    {
+        "title":"Proskauer Rose LLP",
+        'category':'websites',
+        'name':"proskauer",
+        'weight':7,
+        "thumb":"/media/proskauer_thumb.jpg",
+        'media': [
+            { url: "/media/proskauer_Home.jpg", title: 'Proskauer Rose LLP' },
+        ],
+        'body':[],
+        //"url":"http://proskauer.com",
+        'tags':['front','feature',"ADA Compliance"]
+    },
+    {
+        "title":"Sterne Kessler Goldstein Fox",
+        'category':'websites',
+        'name':"skgf",
+        'weight':-1,
+        "thumb":"/media/skgf_thumb.jpg",
+        'media': [
+            { url: "/media/skgf_Home.jpg", title: 'Sterne Kessler Goldstein Fox' },
+        ],
+        'body':[],
+        //"url":"http://skgf.com",
+        'tags':["UI Design",'front','jq','map']
+
+    },
+    {
+        "title":"Millman National Land Services",
+        'category':'websites',
+        'name':"millman",
+        'weight':6,
+        "featured":true,
+        "thumb":"/media/MILL_thumb.jpg",
+        'media': [
+            { url: "/media/MILL_Home.jpg", title: 'Millman National Land Services' },
+        ],
+        'body':[],
+        //"url":"http://millmanland.com",
+        'tags':['ux','front','back','jq','map']
+
+    },
+    {
+        "title":"Marshall Gerstein Borun LLP",
+        'category':'websites',
+        'name':"mgb",
+        'weight':5,
+        "featured":true,
+        "thumb":"/media/MGB_thumb.jpg",
+        "mobile":"/media/MGB_mobile_sm.jpg",
+        'media': [
+            { url: "/media/MGB_Home.jpg", title: 'Marshall Gerstein Borun LLP' },
+        ],
+        'body':[],
+        //"url":"http://marshallip.com",
+        'tags':['ux','front','back','jq','mobile']
+
+    },
+    {
+        "title":"Wyatt Tarrant & Combs LLP",
+        'category':'websites',
+        'name':"wyatt",
+        'weight':-1,
+        "thumb":"/media/wyatt_thumb.jpg",
+        'media': [
+            { url: "/media/wyatt_Home.jpg", title: 'Wyatt Tarrant & Combs LLP' },
+        ],
+        "mobile":"/media/wyatt_mobile_sm.jpg",
+        'body':[],
+        //"url":"http://wyattfirm.com",
+        'tags':['ux','front','jq','mobile']
+
+    },
+    {
+        "title":"AASHTOWare Rebranding Announcement",
+        'category':"special-features",
+        'name':"aashtoware",
+        "thumb":"/media/aashto_thumb.jpg",
+        'media': [
+           { url: "/media/aashto_screen.jpg", title: 'AASHTOWare Rebranding Announcement' },
+        ],
+        'weight':25,
+        'body':[],
+        'tags':['concept','storyboard',"Production"],
+        "url":"https://www.youtube.com/watch?v=DVB_3FeFtJ0"
+    },
+
+]
+
+export default portfolioData;
