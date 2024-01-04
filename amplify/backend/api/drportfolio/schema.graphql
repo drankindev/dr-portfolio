@@ -1,6 +1,6 @@
 type Pages @model @auth(rules: [{allow: public}]) {
   id: ID!
-  name: String!
+  name: String! @index(name: "byName", queryField: "pagesByName")
   title: String
   path: String
   color: String

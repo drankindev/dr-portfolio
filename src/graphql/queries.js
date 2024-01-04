@@ -49,6 +49,42 @@ export const listPages = /* GraphQL */ `
     }
   }
 `;
+export const pagesByName = /* GraphQL */ `
+  query PagesByName(
+    $name: String!
+    $sortDirection: ModelSortDirection
+    $filter: ModelPagesFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    pagesByName(
+      name: $name
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        name
+        title
+        path
+        color
+        subtitle
+        body
+        weight
+        media
+        download
+        categories
+        createdAt
+        updatedAt
+        __typename
+      }
+      nextToken
+      __typename
+    }
+  }
+`;
 export const getTags = /* GraphQL */ `
   query GetTags($id: ID!) {
     getTags(id: $id) {

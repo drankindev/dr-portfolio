@@ -3,7 +3,6 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import Image from './Image';
 //import { FaSquareArrowUpRight } from "react-icons/fa6";
 
-
 const Slider = ({ imgData, imgClass, h, folder = "" }) => {
     const [active,setActive] = useState(0);
 
@@ -23,6 +22,7 @@ const Slider = ({ imgData, imgClass, h, folder = "" }) => {
 
     return (
         <>
+            {imgData && imgData.length > 0 &&
             <div className={imgClass ? imgClass :`slideshow relative w-full bg-green p-4`}>
                 <div className={`overflow-hidden w-full relative ${h === "full" ? 'aspect-square' : 'aspect-[3/2]'}`}>
                 {imgData.sort((a, b) => a.weight - b.weight).map((obj,i) => (
@@ -48,6 +48,7 @@ const Slider = ({ imgData, imgClass, h, folder = "" }) => {
                 </div>
                 :''}
             </div>
+            }
         </>
     )
 }

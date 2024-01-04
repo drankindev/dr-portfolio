@@ -2,7 +2,7 @@ import NavBar from '../components/NavBar';
 import SubNav from '../components/SubNav';
 import { Link, useLocation  } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { setCurrentPage, fetchPages } from '../features/pageSlice'
+import { setCurrentPage } from '../features/pageSlice'
 import { useDispatch, useSelector } from 'react-redux';
 
 const Header = () => {  
@@ -10,12 +10,6 @@ const Header = () => {
     const dispatch = useDispatch();
     const page = useSelector(state => state.page);
     const [subActive, setSubActive] = useState('all');
-
-    useEffect(() => {
-        if (page.status === 'idle') {
-          dispatch(fetchPages())
-        }
-    }, [page.status, dispatch])
 
     useEffect(() => {
         const tmp = location.pathname.split('/');

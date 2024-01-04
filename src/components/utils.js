@@ -1,26 +1,30 @@
 import { generateClient } from "aws-amplify/api";
-import { listPages } from '../graphql/queries';
-//import { getUrl, list } from 'aws-amplify/storage';
+import { pagesByName } from '../graphql/queries';
+import { getUrl } from 'aws-amplify/storage';
 import { Cache } from 'aws-amplify/utils';
 import dayjs from 'dayjs';
 
 const client = generateClient();
 
-export const fetchPages = async ({onSuccess}) => {
+export const fetchPageByName = async ({pageID, onSuccess}) => {
     // get Pages from cache
-    let PagesFromCache = await Cache.getItem('Pages');
-    if (PagesFromCache !== null && PagesFromCache.length > 1000) {
+    let PagesFromCache = null;//await Cache.getItem(pageID);
+    if (PagesFromCache !== null) {
       // return cached Pages
       onSuccess(PagesFromCache);
     } else {
       try {
         // get Pages from api if not cached
-        const apiData = await client.graphql({ query: listPages });
-        const PagesFromAPI = apiData.data.listPages.items ?? [];
+        const apiData = await client.graphql({ 
+          query: pagesByName,
+          variables: {
+            name: pageID }
+          });
+        const PagesFromAPI = apiData.data.pagesByName.items[0] ?? [];
         console.log('data', apiData);
         // cache Pages for 1 week
         const expiration = dayjs(new Date()).add(1, 'd');
-        Cache.setItem('Pages', PagesFromAPI, { expires: expiration.valueOf() });
+        Cache.setItem(pageID, PagesFromAPI, { expires: expiration.valueOf() });
         
         // return api Pages
         onSuccess(PagesFromAPI);
@@ -28,6 +32,23 @@ export const fetchPages = async ({onSuccess}) => {
           console.log(err);
       }
     }
+}
+
+export const validateFile = async ({filename, onSuccess}) => {
+  try {
+      const res = await getUrl({
+          key: filename,
+          options: {
+              accessLevel: 'public',
+          }
+      });
+      if (res.url) {
+        onSuccess(res.url.href);
+      }   
+  } catch (err) {
+      console.log('error',err);
+      return ''; 
+  } 
 }
 
 // export const fetchPostList = async ({onSuccess, status}) => {
